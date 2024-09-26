@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dark Serve - Multi-Service Platform</title>
+    <link rel="icon" href="/static/images/home favicon.png">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/static/images/assets/logo.png" alt="logo" height="120px">
+            </div>
+            <div class="menu">
+                <a href="#services" <i class="fa-solid fa-laptop"></i> Services</a>
+                <a href="#team" <i class="fa-solid fa-user-group"></i> Team</a>
+                <a href="#contact" <i class="fa-solid fa-address-book"></i> Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sliding Banner Section -->
+    <section class="banner">
+        <div class="slides">
+            <div class="slide">🌟🚀 Revolutionizing Services with Dark Serve 🚀🌟</div>
+            <div class="slide">📋 Create PDF with QR Codes Seamlessly</div>
+            <div class="slide">📸 Capture Website Screenshots Instantly</div>
+            <div class="slide">🧑‍💻 Generate Random User Data Effortlessly</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>
+            <i class="fa-solid fa-laptop"></i> Our Services
+        </h2>
+        <div class="service-container">
+            <div class="service">
+                <h3>📄 PDF with QR Code Generator</h3>
+                <p>Generate a PDF containing a QR code for your input data in one click!</p>
+                <a href="/qr_code" class="button">Try it</a>
+            </div>
+            <div class="service">
+                <h3>🧑‍💻 Random User Data Generator</h3>
+                <p>Need dummy user data? Generate random data and export it as CSV!</p>
+                <a href="/random_user" class="button">Generate Data</a>
+            </div>
+            <div class="service">
+                <h3>🌐 Website Screenshot Service</h3>
+                <p>Take screenshots of any website by entering its URL, hassle-free!</p>
+                <a href="/screenshot" class="button">Capture Screenshot</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section id="team" class="team">
+        <h2>
+            <i class="fa-solid fa-user-group"></i> Meet the Team
+        </h2>
+        <div class="team-container">
+            <div class="member">
+                <div class="member-picture">
+                    <img src="/static/images/team member/ks.jpg" alt="Koushik Sarkar" />
+                </div>
+                <h3>Koushik Sarkar</h3>
+                <p>💻 Web Developer</p>
+            </div>
+            <div class="member">
+                <div class="member-picture">
+                    <img src="/static/images/team member/bs.jpg" alt="Bishal Sarkar" />
+                </div>
+                <h3>Bishal Sarkar</h3>
+                <p>🐍 Python Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Dark Serve © 2024 | Developed by Dark Duo Team</p>
+    </footer>
+</body>
+
+</html>

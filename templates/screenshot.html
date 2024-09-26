@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/Website_Screenshot_Service.png">
+    <link rel="stylesheet" href="/static/css/screenshot.css">
+    <link rel="icon" href="/static/images/favicon/Website Screenshot Service.png">
+    <title>Website Screenshot Service</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Website Screenshot Service</h1>
+        <p>Take screenshots of any website by entering its URL, hassle-free!</p>
+        <form id="screenshotForm" action="/screenshot" method="POST">
+            <label for="url">Enter Website URL🔗:</label>
+            <input type="url" id="url" name="url" placeholder="https://example.com" required>
+
+            <button type="submit">Take Screenshot 📷</button>
+        </form>
+    </div>
+</body>
+</html>

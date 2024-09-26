@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/PDF with QR Code Generator.png">
+    <link rel="stylesheet" href="/static/css/qr_code.css">
+    <link rel="icon" href="/static/images/favicon/pdf with QR code.png">
+    <title>PDF with QR Code Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF with QR Code Generator</h1>
+        <form id="qrForm" action="/qr_code" method="POST" enctype="multipart/form-data">
+            <label for="info">Enter Information ✏️:</label>
+            <textarea name="info" id="info" rows="5" cols="40" placeholder="Enter your text here..." required></textarea>
+
+            <label for="fileUpload">Or upload a .txt file 📥:</label>
+            <input type="file" id="fileUpload" name="file" accept=".txt">
+
+            <button type="submit">Generate PDF 📄</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('fileUpload').addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('info').value = e.target.result;
+                };
+                reader.readAsText(file);
+            }
+        });
+    </script>
+</body>
+</html>

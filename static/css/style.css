@@ -1,0 +1,275 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Header Section */
+header {
+    background-color: #333; /* Darker header for contrast */
+    color: white;
+    /* padding: 20px 0; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1770px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.menu a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.menu a:hover {
+    color: #ffcc00; /* Highlighted color on hover */
+}
+
+.menu a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #ffcc00; /* Highlight effect */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+    width: 0;
+}
+
+.menu a:hover::after {
+    width: 100%; /* Underline effect on hover */
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Adjust height if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(211, 211, 211, 0.8), rgba(169, 169, 169, 0.6));
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Shiny Effect */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2); /* White shine effect */
+    opacity: 0.5; /* Adjust the intensity of the shine */
+    pointer-events: none;
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.slides {
+    display: flex;
+    width: 400%; /* 4 slides */
+    animation: slideEffect 16s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Keyframes to control the sliding */
+@keyframes slideEffect {
+    0% {
+        transform: translateX(0); /* First banner */
+    }
+    25% {
+        transform: translateX(0); /* Hold on first banner */
+    }
+    30% {
+        transform: translateX(-100%); /* Slide to second banner */
+    }
+    50% {
+        transform: translateX(-100%); /* Hold on second banner */
+    }
+    55% {
+        transform: translateX(-200%); /* Slide to third banner */
+    }
+    75% {
+        transform: translateX(-200%); /* Hold on third banner */
+    }
+    80% {
+        transform: translateX(-300%); /* Slide to fourth banner */
+    }
+    100% {
+        transform: translateX(-300%); /* Hold on fourth banner, then reset to first */
+    }
+}
+
+/* Services Section */
+.services {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #fff; /* White background for service cards */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 30%; /* Allow 3 cards to fit in a row */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    margin: 0;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    background-color: #ffcc00; /* Button background color */
+    color: black; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffd700; /* Button hover color */
+}
+
+/* Shiny Effect for Buttons */
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s ease;
+    transform: skewX(-30deg);
+}
+
+.button:hover::before {
+    left: 100%; /* Move the shine effect */
+}
+
+/* Click Effect for Buttons */
+.button:active {
+    transform: scale(0.95); 
+}
+
+/* Team Section----------------------------------------- */
+.team {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    position: relative;
+}
+
+.member::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, grey, black, grey);
+    background-size: 400%;
+    z-index: -1;
+    animation: rotate-border 3s linear infinite;
+}
+
+@keyframes rotate-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.member-picture {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.member-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333; /* Darker footer */
+    color: white;
+    position: relative;
+}

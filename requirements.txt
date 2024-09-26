@@ -1,0 +1,6 @@
+Flask==2.3.2
+selenium==4.11.2
+webdriver-manager==3.8.6
+Faker==19.4.1
+fpdf==1.7.2
+qrcode==7.3.1

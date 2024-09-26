@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/Random_User_Data_Generator.png">
+    <link rel="stylesheet" href="/static/css/random_user.css">
+    <link rel="icon" href="/static/images/favicon/Random user data generator.png">
+    <title>Random User Data Generator 🎉</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Random User Data Generator 🎉</h1>
+        <p>Need dummy user data? Generate random data and export it as CSV! 📊</p>
+        <form id="dataForm" action="/random_user" method="POST">
+            <label for="num_users">Number of Users:</label>
+            <input type="number" name="num_users" id="num_users" min="1" required placeholder="Enter number of users">
+
+            <button type="submit">Generate CSV 📄</button>
+        </form>
+    </div>
+</body>
+</html>
