@@ -91,6 +91,14 @@ DARK SERVE/
 
 ---
 
+## 🌐 **Live Demo** 🌐
+
+🚀 **Dark Serve** is now live ! Check out the hosted app and explore its amazing features:
+
+👉 [**Explore Dark Serve**](https://dark-serve-dev-innov8.onrender.com) 🌍✨
+
+---
+
 ## 🌟 **Contribution** 💻
 
 Contributions are welcome! Whether it's improving the code, fixing bugs, or adding new features, feel free to open an issue or submit a pull request. 😊
